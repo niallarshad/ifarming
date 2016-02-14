@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/green4"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".HomeActivity" >
+
+    <ImageButton
+        android:contentDescription="@string/answer_a_question"
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/imageButton1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/green4"
+        android:onClick="answer"
+        android:src="@drawable/answeraquestion" />
+
+    <ImageButton
+        android:contentDescription="@string/legal"
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/imageButton3"
+        android:layout_below="@+id/imageButton3"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/green4"
+        android:onClick="legal"
+        android:src="@drawable/legalbutton" />
+
+    <ImageButton
+        android:contentDescription="@string/policy_and_schemes"
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/imageButton5"
+        android:layout_below="@+id/imageButton5"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/green4"
+        android:onClick="PandS"
+        android:src="@drawable/policyandschemesbutton" />
+
+    <ImageButton
+        android:contentDescription="@string/ask_a_question"
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:background="@drawable/green4"
+        android:onClick="onClick"
+        android:src="@drawable/askaquestion" />
+
+    <ImageButton
+        android:contentDescription="@string/animal_health"
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/imageButton1"
+        android:layout_below="@+id/imageButton1"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/green4"
+        android:onClick="animalHealth"
+        android:src="@drawable/animalhealthbutton" />
+
+</RelativeLayout>

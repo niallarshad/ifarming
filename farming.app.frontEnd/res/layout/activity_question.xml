@@ -1,0 +1,61 @@
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/green4"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_margin="10dp"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:contentDescription="@string/thumbnail"
+        android:id="@+id/ivThumbnailPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageButton
+        android:contentDescription="@string/take_a_pic"
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/green4"
+        android:onClick="onClick"
+        android:src="@drawable/takeapicture" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="163dp"
+        android:layout_height="50dp"
+        android:entries="@array/topics"
+        android:prompt="@string/topics_prompt" />
+
+    <EditText
+        android:hint="@string/ask_question"
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:contentDescription="@string/post_button"
+        android:id="@+id/imageButton1"
+        android:layout_width="149dp"
+        android:layout_height="50dp"
+        android:background="@drawable/green4"
+        android:onClick="Post"
+        android:src="@drawable/postbutton" />
+
+</LinearLayout>
+
+</ScrollView>

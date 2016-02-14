@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="src" path="endpoint-libs/libanswersendpoint-v1/answersendpoint/answersendpoint-v1-generated-source"/>
+	<classpathentry kind="src" path="endpoint-libs/libdeviceinfoendpoint-v1/deviceinfoendpoint/deviceinfoendpoint-v1-generated-source"/>
+	<classpathentry kind="src" path="endpoint-libs/libmessageEndpoint-v1/messageEndpoint/messageendpoint-v1-generated-source"/>
+	<classpathentry kind="src" path="endpoint-libs/libquestionsendpoint-v1/questionsendpoint/questionsendpoint-v1-generated-source"/>
+	<classpathentry kind="lib" path="C:/adt-bundle-windows-x86-20131030/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.9.4/appengine-java-sdk-1.9.4/lib/shared/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/adt-bundle-windows-x86-20131030/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.9.4/appengine-java-sdk-1.9.4/lib/user/appengine-api-1.0-sdk-1.9.4.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

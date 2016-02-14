@@ -1,0 +1,63 @@
+
+<AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:background="@drawable/green4"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="18dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ListView
+        android:id="@+id/answerList"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_x="1dp"
+        android:layout_y="74dp" >
+    </ListView>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1dp"
+        android:layout_y="226dp"
+        android:ems="10"
+        android:hint="@string/answer_here" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="149dp"
+        android:layout_height="50dp"
+        android:layout_x="2dp"
+        android:layout_y="271dp"
+        android:background="@drawable/green4"
+        android:contentDescription="@string/post_button"
+        android:onClick="Post"
+        android:src="@drawable/postbutton" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="264dp"
+        android:layout_y="266dp"
+        android:background="@drawable/green4"
+        android:contentDescription="@string/refresh"
+        android:onClick="Refresh"
+        android:src="@drawable/refresh" />
+
+</AbsoluteLayout>
