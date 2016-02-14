@@ -1,0 +1,203 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://farmsocialapp.appspot.com/_ah/api",
+  "name" : "questionsendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://farmsocialapp.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "farming.com",
+  "ownerName" : "farming.com",
+  "packagePath" : "app.frontEnd",
+  "methods" : {
+    "questionsendpoint.listQuestions" : {
+      "path" : "questions",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.farming.app.frontEnd.QuestionsEndpoint.listQuestions",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "questionsendpoint.removeQuestions" : {
+      "path" : "questions/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.farming.app.frontEnd.QuestionsEndpoint.removeQuestions",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "questionsendpoint.getQuestions" : {
+      "path" : "questions/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.farming.app.frontEnd.QuestionsEndpoint.getQuestions",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "questionsendpoint.insertQuestions" : {
+      "path" : "questions",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.farming.app.frontEnd.QuestionsEndpoint.insertQuestions",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "questionsendpoint.updateQuestions" : {
+      "path" : "questions",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.farming.app.frontEnd.QuestionsEndpoint.updateQuestions",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "CollectionResponse_Questions" : {
+        "id" : "CollectionResponse_Questions",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Questions"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Questions" : {
+        "id" : "Questions",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string"
+          },
+          "question" : {
+            "type" : "string"
+          },
+          "facebookName" : {
+            "type" : "string"
+          },
+          "facebookId" : {
+            "type" : "string"
+          },
+          "isAnswered" : {
+            "type" : "string"
+          },
+          "topic" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.farming.app.frontEnd.QuestionsEndpoint.listQuestions" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Questions"
+        }
+      },
+      "com.farming.app.frontEnd.QuestionsEndpoint.removeQuestions" : {
+      },
+      "com.farming.app.frontEnd.QuestionsEndpoint.getQuestions" : {
+        "response" : {
+          "$ref" : "Questions"
+        }
+      },
+      "com.farming.app.frontEnd.QuestionsEndpoint.insertQuestions" : {
+        "request" : {
+          "$ref" : "Questions"
+        },
+        "response" : {
+          "$ref" : "Questions"
+        }
+      },
+      "com.farming.app.frontEnd.QuestionsEndpoint.updateQuestions" : {
+        "request" : {
+          "$ref" : "Questions"
+        },
+        "response" : {
+          "$ref" : "Questions"
+        }
+      }
+    }
+  }
+}
